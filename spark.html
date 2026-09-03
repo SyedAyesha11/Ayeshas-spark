@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Your Spark | Ayesha's Spark</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Ayesha's <span>Spark</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#how">How It Works</a>
+            <a href="index.html#projects">Projects</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Spark Generator -->
+    <section class="spark-generator">
+
+        <p class="section-label">
+            SPARK GENERATOR
+        </p>
+
+        <h1>
+            Turn Your Problem Into a
+            <span>Spark.</span>
+        </h1>
+
+        <p class="section-text">
+            Tell us about a real-world problem you noticed.
+            We'll help turn it into a project idea.
+        </p>
+
+
+        <div class="spark-form">
+
+            <label>
+                What problem did you notice?
+            </label>
+
+            <textarea
+                id="problem"
+                placeholder="Example: Our college hostel wastes a lot of water..."
+            ></textarea>
+
+
+            <label>
+                Choose a domain
+            </label>
+
+            <select id="domain">
+
+                <option value="">Select a domain</option>
+                <option>Agriculture</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+                <option>Environment</option>
+                <option>Renewable / Sustainable Energy</option>
+                <option>Transportation</option>
+                <option>Mining</option>
+                <option>Water Management</option>
+                <option>Space Technology</option>
+                <option>Toys & Games</option>
+                <option>Disaster Management</option>
+                <option>Blockchain & Cybersecurity</option>
+                <option>Tourism</option>
+                <option>Clean & Green Technology</option>
+                <option>Robotics & Drones</option>
+                <option>Heritage & Culture</option>
+                <option>Fitness & Sports</option>
+                <option>Food & Nutrition</option>
+                <option>Dairy & Livestock</option>
+                <option>Aquaculture</option>
+                <option>Business</option>
+                <option>Finance</option>
+                <option>Social & Community</option>
+                <option>Science & Research</option>
+                <option>Other</option>
+
+
+
+
+            </select>
+
+<label>
+    What skills do you know?
+</label>
+
+<div class="skills-grid">
+
+    <label class="skill-option">
+        <input type="checkbox" value="Python">
+        Python
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="C">
+        C
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="C++">
+        C++
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Java">
+        Java
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="C#">
+        C#
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="HTML">
+        HTML
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="CSS">
+        CSS
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="JavaScript">
+        JavaScript
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="SQL">
+        SQL
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="AI/ML">
+        AI / ML
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Data Science">
+        Data Science
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Data Analysis">
+        Data Analysis
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="IoT">
+        IoT
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Arduino">
+        Arduino
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Robotics">
+        Robotics
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Computer Vision">
+        Computer Vision
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="NLP">
+        NLP
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Git & GitHub">
+        Git & GitHub
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="React">
+        React
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Flask">
+        Flask
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="Cybersecurity">
+        Cybersecurity
+    </label>
+
+    <label class="skill-option">
+        <input type="checkbox" value="UI/UX Design">
+        UI / UX Design
+    </label>
+
+</div>
+            
+
+            <label>
+                Team size
+            </label>
+
+            <select id="team">
+
+                <option value="">Select team size</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+
+            </select>
+
+
+            <button
+                class="primary-btn"
+                onclick="generateSpark()"
+            >
+                ✦ Generate My Spark
+            </button>
+
+        </div>
+
+        <!-- Result -->
+<div id="result" class="spark-result" style="display: none;">
+
+    <p class="section-label">
+        YOUR SPARKS
+    </p>
+
+    <h2>We Found Some Possibilities ✦</h2>
+
+    <p class="result-intro">
+        Based on your problem and chosen domain, here are some
+        project directions you can explore.
+    </p>
+
+
+    <!-- Spark 1 -->
+    <div class="spark-option recommended">
+
+        <span class="recommended-label">
+            ⭐ RECOMMENDED
+        </span>
+
+        <h3 id="projectName"></h3>
+
+        <p id="projectDescription"></p>
+
+        <h4>Recommended Technologies</h4>
+
+        <p id="technologies"></p>
+
+    </div>
+
+
+    <!-- Spark 2 -->
+    <div class="spark-option">
+
+        <span class="spark-number">
+            SPARK 02
+        </span>
+
+        <h3 id="projectName2"></h3>
+
+        <p id="projectDescription2"></p>
+
+        <h4>Technologies</h4>
+
+        <p id="technologies2"></p>
+
+    </div>
+
+
+    <!-- Spark 3 -->
+    <div class="spark-option">
+
+        <span class="spark-number">
+            SPARK 03
+        </span>
+
+        <h3 id="projectName3"></h3>
+
+        <p id="projectDescription3"></p>
+
+        <h4>Technologies</h4>
+
+        <p id="technologies3"></p>
+
+    </div>
+
+
+    <!-- Roadmap -->
+    <div class="roadmap-box">
+
+        <h3>Project Roadmap</h3>
+
+        <p id="roadmap"></p>
+
+    </div>
+<!-- EXTRA PROJECT DETAILS -->
+
+<div class="project-details">
+
+    <div class="detail-card">
+        <h3>🧠 Skills to Learn</h3>
+        <p id="skillsToLearn">
+            Python, AI/ML, IoT and Data Analysis
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h3>🧩 Project Modules</h3>
+        <p id="projectModules">
+            Problem Analysis → Sensors → Data Collection → AI Model → Dashboard
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h3>📊 Difficulty Level</h3>
+        <p id="difficulty">
+            Intermediate
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h3>⏱️ Estimated Time</h3>
+        <p id="estimatedTime">
+            4–6 Weeks
+        </p>
+    </div>
+
+</div>
+</div>
+
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
