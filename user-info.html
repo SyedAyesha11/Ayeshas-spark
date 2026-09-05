@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tell Us About You | Ayesha's Spark</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Ayesha's <span>Spark</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="spark.html">Find Your Spark</a>
+        </div>
+
+    </nav>
+
+
+    <!-- USER INFORMATION -->
+    <section class="user-info-page">
+
+        <p class="section-label">BEFORE WE SPARK</p>
+
+        <h1>
+            Tell Us About <span>You.</span>
+        </h1>
+
+        <p class="section-text">
+            A few details will help us understand your background
+            and provide better project guidance.
+        </p>
+
+
+        <div class="user-info-form">
+
+            <label>Who are you?</label>
+
+            <div class="user-type-buttons">
+
+                <button type="button" onclick="showStudent()">
+                    🎓 Student
+                </button>
+
+                <button type="button" onclick="showOther()">
+                    👤 Other
+                </button>
+
+            </div>
+
+
+            <!-- STUDENT FIELDS -->
+
+            <div id="studentFields" style="display: none;">
+
+                <label>First Name</label>
+                <input type="text" id="studentName"
+                    placeholder="Enter your first name">
+
+                <label>College Name</label>
+                <input type="text" id="collegeName"
+                    placeholder="Enter your college name">
+
+                <label>Course / Program</label>
+                <input type="text" id="course"
+                    placeholder="Example: B.Tech">
+
+                <label>Year</label>
+
+                <select id="studyYear">
+                    <option value="">Select year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+
+                <label>Branch</label>
+
+                <input type="text" id="branch"
+                    placeholder="Example: CSE-AIML">
+
+                <label>Email</label>
+
+                <input type="email" id="studentEmail"
+                    placeholder="Enter your email">
+
+                <label>What are you looking for?</label>
+
+                <select id="studentPurpose">
+
+                    <option value="">Select purpose</option>
+                    <option>Academic Project</option>
+                    <option>Mini Project</option>
+                    <option>Major Project</option>
+                    <option>Hackathon</option>
+                    <option>Innovation Idea</option>
+                    <option>Learning</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- OTHER FIELDS -->
+
+            <div id="otherFields" style="display: none;">
+
+                <label>First Name</label>
+
+                <input type="text" id="otherFirstName"
+                    placeholder="Enter your first name">
+
+                <label>Last Name</label>
+
+                <input type="text" id="otherLastName"
+                    placeholder="Enter your last name">
+
+                <label>Phone Number</label>
+
+                <input type="tel" id="otherPhone"
+                    placeholder="Enter your phone number">
+
+                <label>Email <span>(Optional)</span></label>
+
+                <input type="email" id="otherEmail"
+                    placeholder="Enter your email">
+
+                <label>What are you looking for?</label>
+
+                <select id="otherPurpose">
+
+                    <option value="">Select purpose</option>
+                    <option>Project Idea</option>
+                    <option>Business Idea</option>
+                    <option>Technical Help</option>
+                    <option>Innovation</option>
+                    <option>Learning</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- CONSENT -->
+
+            <label class="consent-option">
+
+                <input type="checkbox" id="contactConsent">
+
+                I agree to be contacted about my idea or project.
+
+            </label>
+
+
+            <button
+                type="button"
+                class="primary-btn"
+                onclick="submitUserInfo()">
+
+                ✦ Continue to Spark
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        function showStudent() {
+
+            document.getElementById("studentFields").style.display = "block";
+            document.getElementById("otherFields").style.display = "none";
+
+        }
+
+
+        function showOther() {
+
+            document.getElementById("otherFields").style.display = "block";
+            document.getElementById("studentFields").style.display = "none";
+
+        }
+
+
+        function submitUserInfo() {
+
+            const consent =
+                document.getElementById("contactConsent").checked;
+
+            if (!consent) {
+
+                alert("Please agree to be contacted before continuing.");
+
+                return;
+
+            }
+
+            window.location.href = "spark.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
