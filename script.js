@@ -7,7 +7,7 @@
 // GO TO SPARK GENERATOR
 // ------------------------------------------------------
 function findSpark() {
-    window.location.href = "spark.html";
+    window.location.href = "user-info.html";
 }
 
 
